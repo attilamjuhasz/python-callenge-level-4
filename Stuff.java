@@ -1,3 +1,5 @@
+// Attila Juhasz | 9/8/2026 | This code scraps a website to get to the next level
+
 package stuff;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,15 +8,15 @@ import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 public class Stuff {
+
+     // Precondition: Website needs to exit
+     // Postcondition: Prints the html file name of the next level
      public static void main(String[] args) throws IOException {
           String num = "12345";
           int intNum = 12345;
           int i = 0;
           URL url = new URL("https://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=12345");
-          while (i < 1000){
-               if (num.equals("peak.html")){
-                    break;
-               }
+          while (true){
                url = new URL("https://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=" + num);
                BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
                
